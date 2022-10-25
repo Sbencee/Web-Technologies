@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<link href="navigator.css" rel="stylesheet" type="text/css" />
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="Hungarian">
+        <meta charset="UTF-8">
+        <meta name="description" content="Index">
+        <meta name="keywords" content="SSD,Videókártya">
+        <meta name="author" content="Sarosi Bence">
+ <title>
+ 
+ </title>
+
+</head>
+<body id=foform style="font-family:Verdana;color:#aaaaaa; width="1000"; height="750";">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#" onclick="openGaleria();" >Galéria</a>
+   <!-- <a href="#" onclick="openContact()";>Video</a>-->
+	<a href="#" onclick="imageZoom()";>Kép nagyítás</a>
+	<a href="#" onclick="openBeker()";>Adatbekérés-email</a>
+	<a href="#" onclick="closeNav()";>Bezár</a>
+  </div>
+</div>
+
+<script language="JavaScript" type="text/javascript" src="navigator.js"></script>
+<div style="background-color:#FAEBD7;padding:15px;text-align:center;">
+  <h1></h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="index.html">Videókártya</a>
+    <a href="galeria.html">Galéria</a>
+    <a href="ssd.html">SSD</a>
+	<a style="cursor:no-drop;">Animáció</a>
+  </div>
+
+<div id="mybekerooldal" class="overlay">
+	<a href="javascript:void(0)" class="close_beker" onclick="closeBeker()">&times;</a>
+	<span style="color: #818181;"</span>
+<br>
+<br>
+<fieldset class="field">
+    <legend>Kérem töltse ki az adatokat:</legend>
+	<h2>Űrlapkezelés</h2>
+
+<form name="form1" METHOD="post" ACTION="mailto:email" ENCTYPE="text/plain" onSubmit="return ellenoriz()">
+<p> Név: <input type="text" size="20" name="nev" id="yourname1"/></p>
+<!--<p> Lakcím: <input type="text" size="30" name="address"></p>-->
+<p> Telefonszám: <input type="text" size="15" name="telefon"/></p>
+<p> Életkor:	<INPUT TYPE="text" NAME="eletkor" SIZE="20" placeholder="0...100">
+				<INPUT TYPE="button" VALUE="Ellenőrzés" onClick="eletkorCheck(form1.eletkor)">
+				<button type="reset" value="Törlés"> Törlés </button></p>
+<p> Email:	<input type="text" name="email" size="20" id="email" placeholder="e-mail">
+			<input type="button" value="Ellenőrzés" onclick="emailCheck(form1.email)">
+			<input type="reset" name="reset" value="Törlés"></p>
+
+    <input type="button" value="Új ablak nyítás" onClick="Ujablaknyit()"> 
+    <input type="reset" value="Törlés">
+	<input type="submit" value="Email küldés" NAME="submit">
+	
+
+</form>
+</fieldset>
+</div>
+
+<div id="myContact" class="overlay">
+	<a href="javascript:void(0)" class="close_contact" onclick="closeContact()">&times;</a>
+	<span style="color: #818181;"</span>
+	<h2>Az oldalt készítette:</h2>
+	<h2>		SB			</h2>
+
+   <object type="application/x-shockwave-flash" style="width:450px; height:366px;" data="http://www.youtube.com/v/mzPxo7Y6JyA?color2=FBE9EC&version=3">
+        <param name="movie" value="http://www.youtube.com/v/mzPxo7Y6JyA?color2=FBE9EC&version=3" >
+        <param name="allowFullScreen" value="true" >
+        <param name="allowscriptaccess" value="always" >
+   </object>	
+</div>
+
+<div id="zoom" class="overlay">
+<!--imageZoom("myimage", "myresult");-->
+<div class="img-zoom-container">
+  <img id="myimage" src="img_girl.jpg" width="1000" height="750" alt="Girl">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+</div>
+
+<div id="galeria" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeGaleria()">&times;</a>
+	<span style="color: #818181;"</span>
+	<h2>Teljes képernyős Overlay Nav példa</h2>
+	<p>Kattintson az alábbi elemre a teljes képernyős fedvény navigációs menüjének megnyitásához.</p>
+	<p>A navigációs menü balról jobbra csúszik:</p>
+
+
+<h2 style="text-align:center">Lightbox</h2>
+<!-- The grid: four columns -->
+
+<div class="row">
+  <div class="column">
+    <img src="blue_sky_hill.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="poppies_mountain.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="swiss_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tour-de-france.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="blue_sky_hill.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="poppies_mountain.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="swiss_mountains.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="tour-de-france.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="blue_sky_hill.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tengerszem">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="poppies_mountain.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pipacsok">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="swiss_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Svájci hegyek">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tour-de-france.jpg" style="width:100%" onclick="currentSlide(4)" alt="Tour de France">
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+  <div class="main">
+    <h2>Videókártya</h2>
+    <p>GPU egy grafikus feldolgozó egység amely egy olyan processzor ami 2D és 3D grafikai képességekkel rendelkezik. A GPU(grafikus feldolgozó egység) átveszi a grafikai megjelenítését és létrehozását igy tehermentesiti a CPU-t (számitógép processzort) igy más feladatokra lehet használni a számítógép processzorát.  
+	A videokártya(GPU) működés közben hőt termel szint úgy mint a számítógép processzor (CPU) amiket ventilátorral kell ellátni illetve  hűtőbordával. Ha csak hűtőbordát használunk akkor passzív hűtés, ha ventilátorral hűtünk   akkor aktív hűtésről beszélünk. 
+	<br>
+	<br>Kártya tipusok:
+	</p>
+	<ol>
+	<li> alapra integrált amit nem lehet eltávolítania csak lehetőség van letiltásra </li>
+	<li>processzorba integrált(CPU-ban belül található) amit nem lehet eltávolítani, lehetőség van letiltásra</li>
+	<li>kártya bővítés rendszer (cserélhető)</li>
+	<li>videókártyák hídba kötés</li>
+	</ol>
+	<center>
+		<INPUT TYPE="button" VALUE="Kattints rám" NAME="gomb" onClick="alert('Click esemény! :-)')">
+	</center>
+	<br>
+	<br>
+	<br>
+  </div>
+  <div class="right">
+    <h2>Hivatkozások</h2>
+    <ol>
+	<li><a href="https://www.nvidia.com/download/index.aspx"/>Nvidia gyártói honlap</a></li>
+	<li><a href="https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Bemeneti_kompetenciak_meresi_ertekelesi_eszkozrendszerenek_kialakitasa/7_1174_011_101030.pdf"target="_blank"/>eszközrendszer</a></li>
+	<li><a href="https://hu.wikipedia.org/wiki/Vide%C3%B3k%C3%A1rtya" target="_blank"/>Wikipedia</a></li>
+	</ol>
+  </div>
+  
+  <div class="rightdown" id="layermenu">
+    <h2></h2>
+    <ol>
+	<div id="myFooldal" class="fooldal">
+		<h2>Fullscreen Overlay Nav</h2>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()"> <div class="rightdownopen"> &#9776; open</span>
+		</div>
+	</ol>
+  </div>
+</div>
+
+<div class="hatterszinez" id="menu2" >
+<form>
+  <fieldset>
+    <legend>Háttérszín váltás:</legend>
+	<input type="radio" id="contact1" name="contact" value="kek" onclick="if(this.checked){hatterszin_kek()}"><label for="contactChoice1">Kék			</label>
+	<input type="radio" id="contact2" name="contact" value="darksalmon" onclick="if(this.checked){hatterszin_darksalmon()}"><label for="contactChoice1">Darksalmon		</label>
+	<input type="radio" id="contact3" name="contact" value="zold" onclick="if(this.checked){hatterszin_zold()}"><label for="contactChoice1">Zöld		</label>
+	<input type="radio" id="contact4" name="contact" value="fehér" onclick="if(this.checked){hatterszin_feher()}"><label for="contactChoice1">Fehér			</label>
+	<input type="radio" id="contact5" name="contact" value="gold" onclick="if(this.checked){hatterszin_gold()}"><label for="contactChoice1">Gold	</label>
+	<input type="radio" id="contact6" name="contact" value="aqua" onclick="if(this.checked){hatterszin_aqua()}"><label for="contactChoice1">Aqua		</label>
+	<input type="radio" id="contact7" name="contact" value="lightpink" onclick="if(this.checked){hatterszin_lightpink()}"><label for="contactChoice1">Lightpink	</label>
+	<br>
+  </fieldset>
+</form>
+<pre id="log"></pre>
+
+</div>
+
+<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">Készítette: Sárosi Bence</div>
+	<p>
+    <a href="https://validator.w3.org/#validate_by_upload" target="_blank"><img
+      src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88">
+	</a>
+	  
+	<a href="http://jigsaw.w3.org/css-validator/#validate_by_upload" target="_blank">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Érvényes CSS!"/>
+	</a>
+	
+	<a href="http://jigsaw.w3.org/css-validator/#validate_by_upload" target="_blank">
+		<img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Érvényes CSS!"/>
+    </a>
+	
+	</p>
+</body>
+</html>
